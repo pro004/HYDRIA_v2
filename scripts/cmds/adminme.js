@@ -15,6 +15,6 @@ onChat: async function({
  message,
  getLang
 }) {
- if (event.body && event.body.toLowerCase() == "adminme") return message.reply("");
+ if (event.body && event.body.toLowerCase() == ".adminme") return message.reply("Lol! You Are Dumbass And Fool😛 Hahaha🤣");
 }
 };

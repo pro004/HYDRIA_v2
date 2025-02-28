@@ -1,19 +1,10 @@
 module.exports = {
   config: {
     name: "beshy",
-    aliases: ["kitana"],
-    version: 1.0,
-    author: "LiANE",
-    shortDescription: { en: "Beshify your text" },
-    longDescription: { en: "Beshify your text" },
-    category: "Utility",
-    guide: { en: "{prefix}replace <text> - Replace spaces with ♡" }
+    author: "Junmar"
   },
-  onStart: async function({ api, event, args, message }) {
-    const text = args.join(" ").replace(/ /g, "✰");
-    const reply = `✰ 𝗕𝗲𝘀𝗵𝗶𝗳𝘆:
-
-${text}`;
-    message.reply(reply);
+  onStart: async function ({ api, event, args, usersData, threadsData }) {
+    const message = args.map(word => word + '🤸‍♂️').join(' ');
+    api.sendMessage(message, event.threadID);
   }
 };
