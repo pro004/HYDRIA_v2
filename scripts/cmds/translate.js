@@ -90,7 +90,7 @@ module.exports = {
 		}
 		else {
 			content = event.body;
-			let lastIndexSeparator = content.lastIndexOf("->");
+			let lastIndexSeparator = content.lastIndexOf("-");
 			if (lastIndexSeparator == -1)
 				lastIndexSeparator = content.lastIndexOf("=>");
 
